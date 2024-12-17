@@ -30,12 +30,6 @@ class Post(models.Model):
         return self.title
     
 
-
-
-
-
-
-
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments') # related_name is used to refer to the post in the database
     user = models.ForeignKey(User, on_delete=models.CASCADE)
